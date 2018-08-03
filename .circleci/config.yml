@@ -19,9 +19,4 @@ jobs:
           command: |
             python3 -m venv venv
             . venv/bin/activate
-
-      - run:
-          name: run tests
-          command: |
-            . venv/bin/activate
             python manage.py
