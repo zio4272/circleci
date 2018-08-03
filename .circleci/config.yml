@@ -2,21 +2,20 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/python:3.6.6
-    
+      - image: circleci/python:3.6
     working_directory: ~/circleci
-
     steps:
       - checkout
-
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "requirements.txt" }}
-          - v1-dependencies-
-      
+          - dependency-cache-{{ checksum "requirements.txt" }}
       - run:
           name: install dependencies
           command: |
             python3 -m venv env
             . env/bin/activate
-            . python manage.py
+            pip install -r requirements.txt
+      - save_cache:
+          key: dependency-cache-{{ checksum "requirements.txt" }}
+          paths:
+            - ./env
