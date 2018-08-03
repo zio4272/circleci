@@ -19,4 +19,4 @@ jobs:
           command: |
             python3 -m venv env
             . env/bin/activate
-            python manage.py
+            . python manage.py
