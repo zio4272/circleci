@@ -10,7 +10,7 @@ configparser==3.5.0
 docker==3.3.0
 docker-pycreds==0.2.3
 enum34==1.1.6
-Flask==0.12.2
+Flask==1.0
 Flask-Cors==3.0.3
 Flask-RESTful==0.3.6
 flask-restful-swagger-2==0.35
