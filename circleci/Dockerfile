@@ -5,7 +5,7 @@ WORKDIR /ubuntu/home/circleci/circleci/
 
 RUN python -m pip install --upgrade pip
 RUN . env/bin/activate
-RUN pip install -r requirements.txt
+RUN pip install -r ./requirements.txt
 RUN deactive
 
 CMD uwsgi uwsgi.ini
