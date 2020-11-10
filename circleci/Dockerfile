@@ -4,8 +4,8 @@ ADD . /ubuntu/home/circleci/circleci/
 WORKDIR /ubuntu/home/circleci/circleci/
 
 RUN python -m pip install --upgrade pip
-RUN virtualenv env
-RUN source /env/bin/activate
+RUN . env/bin/activate
 RUN pip install -r requirements.txt
+RUN deactive
 
 CMD uwsgi uwsgi.ini
