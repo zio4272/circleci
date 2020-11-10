@@ -1,7 +1,7 @@
 FROM python:3.6
 
-ADD . /ubuntu/home/circleci/circleci
-WORKDIR /ubuntu/home/circleci/circleci
+ADD . /ubuntu/home/circleci/circleci/
+WORKDIR /ubuntu/home/circleci/circleci/
 
 RUN python -m pip install --upgrade pip
 RUN virtualenv env
